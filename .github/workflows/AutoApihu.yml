@@ -34,7 +34,7 @@ jobs:
       run: |
         python -c '
         import random, time
-        delay = random.randint(0, 18000)  # 随机延迟 0 到 60 分钟
+        delay = random.randint(0, 3600)  # 随机延迟 0 到 60 分钟
         print(f"Sleeping for {delay} seconds...")
         time.sleep(delay)
         '
