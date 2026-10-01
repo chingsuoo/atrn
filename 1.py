@@ -25,8 +25,8 @@ from datetime import datetime
 
 path=sys.path[0]+r'/1.txt'
 num1 = 0
-MIN_CALLS_PER_RUN = 4
-MAX_CALLS_PER_RUN = 12
+MIN_CALLS_PER_RUN = 2
+MAX_CALLS_PER_RUN = 6
 API_ENDPOINTS = [
     ("drive root", "https://graph.microsoft.com/v1.0/me/drive/root", 5),
     ("drive", "https://graph.microsoft.com/v1.0/me/drive", 4),
