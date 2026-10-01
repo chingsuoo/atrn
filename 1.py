@@ -5,6 +5,7 @@ import argparse
 import os
 import pytz
 from datetime import datetime
+import random
 # import parser
 #先注册azure应用,确保应用有以下权限:
 #files:	Files.Read.All、Files.ReadWrite.All、Sites.Read.All、Sites.ReadWrite.All
@@ -104,7 +105,10 @@ def main():
                 print(name + " 调用失败，HTTP " + str(response.status_code))
         except req.RequestException as error:
             print(name + " 请求异常: " + str(error))
-for _ in range(6):
+
+run_times = random.randint(3,8)
+
+for _ in range(run_times):
     main()
     for i in range(random.randint(30, 60),0,-1):
         time.sleep(1)
